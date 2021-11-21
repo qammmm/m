@@ -19,7 +19,7 @@ class TestCorpTap:
         r = self.corptap.article_list()
         id = r.json().get("id")
         r = self.corptap.article(id)
-        assert r.status_code == 300
+        assert r.status_code == 200
 
     def test_delete(self):
         r = self.corptap.create()
