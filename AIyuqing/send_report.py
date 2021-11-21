@@ -17,13 +17,13 @@ class DingRobot:
         return case_error
 
     def send_report(self):
-        if self.error == 0:
+        if self.error > 0:
             headers = {"Content-Type": "application/json;charset=utf-8"}
             content = {
                 "msgtype": "text",
                 "text": {
                     "text": "账号mcm,密码mcm.521520.",
-                    "title": "田继洋" + datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+                    "title": "铭大大" + datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
                     "picUrl": "",
                     "messageUrl": "http://mcm:mcm.521520.@47.94.5.28:9000/job/aiyuqing/allure"
                 }
@@ -32,6 +32,6 @@ class DingRobot:
         else:
             print('无报错')
 
-
 if __name__ == '__main__':
     DingRobot().send_report()
+
